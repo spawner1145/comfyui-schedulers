@@ -1,7 +1,7 @@
 # comfyui-schedulers
 测试用scheduler，目前有一个`smooth`调度器
 
-neta lumina下的测试
+with neta lumina
 <p align="center">
     <img src="https://github.com/user-attachments/assets/e23eed4a-58c0-49bd-8444-ab9520a88a9f" width="150" style="margin: 5px;">
     <img src="https://github.com/user-attachments/assets/aace9408-b29e-4962-b5b9-275308f86e58" width="150" style="margin: 5px;">

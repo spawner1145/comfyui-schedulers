@@ -23,7 +23,15 @@ def smooth_scheduler(model_sampling, steps, power=1.5, sgm_compatible=False):
         sigmas = torch.cat([sigmas, torch.tensor([0.0])])
     
     return sigmas
-#############################################
-from comfy.samplers import SCHEDULER_HANDLERS, SchedulerHandler
+####################################################
+from comfy.samplers import SchedulerHandler, SCHEDULER_HANDLERS, SCHEDULER_NAMES
 
-SCHEDULER_HANDLERS["smooth"] = SchedulerHandler(smooth_scheduler, use_ms=False)
+scheduler_name = "smooth"
+if scheduler_name not in SCHEDULER_HANDLERS:
+    scheduler_handler = SchedulerHandler(handler=smooth_scheduler, use_ms=True)
+    SCHEDULER_HANDLERS[scheduler_name] = scheduler_handler
+    if scheduler_name not in SCHEDULER_NAMES:
+        SCHEDULER_NAMES.append(scheduler_name)
+
+######################################################
+NODE_CLASS_MAPPINGS = {}

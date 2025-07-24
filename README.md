@@ -38,7 +38,7 @@ ai generated image.blurry, worst quality, low quality
 - 克隆本仓库到 ComfyUI 的custom_nodes目录下
 - 重启 ComfyUI
 - 在k采样器节点中找到 "调度器" 类别，即可使用新增的调度器
-
+----------------------------------------------------------------------------------------
 This plugin provides additional scheduler options for ComfyUI, currently including a smooth scheduler designed to optimize the quality and consistency of generated images.
 ## Test Results
 I tested the following schedulers using the Neta Lumina model at 2048x2048 resolution (images above are compressed):
